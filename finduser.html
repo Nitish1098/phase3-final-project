@@ -1,0 +1,25 @@
+<!DOCTYPEhtml>
+<htmlxmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<metacharset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<divaling="center">
+<H3>Find User By UserName</H3>
+<br>
+<formaction="#"th:action="@{/find{username}"th:object="${userdetails}"method="post">
+<tableborder="0"cellpadding="10">
+<tr>
+<td>UserName:</td>
+<td><inputtype="text"th:feild="*{username}"/>
+</td>
+<tr>
+<tdcolspan="2"><buttontype="submit">Search</button></td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>

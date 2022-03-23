@@ -1,0 +1,28 @@
+<!DOCTYPEhtml>
+<htmlxmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<metacharset="ISO-8859-1">
+<title>Create New Category</title>
+</head>
+<body>
+<divaling="center">
+<h1>Create New Category</h1>
+<br/>
+<formaction="#"th:action="@{/save}"th:object="${categories}"
+method="post">
+
+<tableborder="0"cellpadding="10">
+<tr>
+<td>Name:</td>
+<td><inputtype="text"th:field="*{categoryName}"/></td>
+</tr>
+<tr>
+<tdcolspan="2"><buttontype="submit">Save</button></td>
+</tr>
+</table>
+</form>
+<ahref="/logout">LogOut</a>
+</div>
+</body>
+</html>

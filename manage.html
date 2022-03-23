@@ -1,0 +1,30 @@
+<!DOCTYPEhtml>
+<htmlxmlns="http://www.w3.org/1999/xhtml"xmlns:th="http://www.thymeleaf.org">
+<head>
+<metacharset="ISO-8859-1">
+<title>Manage Category Unit<</title>
+</head>
+<body>
+<divalign="center">
+<h1>Categories List</h1><br>
+<divalign="center">
+<ahref="/new">Create New Category</a>
+</div>
+<tableborder="1"cellpadding="10"><thead><tr>
+<th>id</th>
+<th>Name</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<trth:each="categories : ${listCategories}">
+<tdth:text="${categories.id}">id</td>
+<tdth:text="${categories.categoryName}">Name</td>
+<td><ath:href="@{/delete/{id}(id=${categories.id})}">Delete</a></td>
+</tr>
+</tbody>
+</table>
+<ahref="/logout">LogOut</a>
+</div>
+</body>
+</html>

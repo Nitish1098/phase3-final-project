@@ -1,0 +1,43 @@
+<!DOCTYPEhtml>
+<htmlxmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<metacharset="ISO-8859-1">
+<title>List OF User Details</title>
+</head>
+<body>
+<divalign="center">
+<H1>List of All The Users</H1>
+<br/>
+<tableborder="1"cellpadding="10">
+<thead>
+<tr>
+<th>UserId</th>
+<th>UserName</th>
+<th>email Id</th>
+<th>Phone</th>
+<th>Product Perchased</th>
+<th>Perchase Date</th>
+<th>Category</th>
+<th>Create Date</th>
+<th>Last Update Date</th>
+</tr>
+</thead>
+<tbody>
+<trth:each="userdetails : ${listUsers}">
+<tdth:text="${userdetails.userId}">UserId</td>
+<tdth:text="${userdetails.username}">UserName</td>
+<tdth:text="${userdetails.emailId}">email Id</td>
+<tdth:text="${userdetails.phone}">Phone</td>
+<tdth:text="${userdetails.productPerchased}">Product Perchased</td>
+<tdth:text="${userdetails.perchaseDate}">Perchase Date</td>
+<tdth:text="${userdetails.category}">Category</td>
+<tdth:text="${userdetails.createDate}">Create Date</td>
+<tdth:text="${userdetails.lastUpdateDate}">Last Update Date</td>
+</tr>
+</tbody>
+</table>
+<ahref="/logout">LogOut</a>
+</div>
+</body>
+</html>
